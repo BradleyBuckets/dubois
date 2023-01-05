@@ -51,3 +51,48 @@ div {
   margin-top: 10px;
   letter-spacing: 4px;
 }
+
+/* Second nav */
+.nav2 {
+  height: auto;
+  width: 100vw;
+  color: var(--primary-white);
+  background-color: var(--primary-dark);
+}
+
+.navContainer2,
+.nav2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navContainer2 {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.navItems2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about2,
+.menu2,
+.bookNow2 {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.logo2 {
+  font-size: 40px;
+  font-weight: bolder;
+  padding: 10px;
+  letter-spacing: 4px;
+}
