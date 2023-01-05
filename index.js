@@ -55,7 +55,19 @@ let triLeft = [
   ["triContainerLeft", "navContainer", ""],
   ["triangle", "triContainerLeft", ""],
 ];
-nav.buildNav(arr);
-nav.addTriangle(triCenter);
-nav.remove("triContainer");
-nav.addTriangle(triLeft);
+let triCenter2 = [
+  ["triContainer2Menu", "nav2", ""],
+  ["triangle", "triContainer2Menu", ""],
+];
+let triRight2 = [
+  ["triContainer2Book", "nav2", ""],
+  ["triangle", "triContainer2Book", ""],
+];
+let triLeft2 = [
+  ["triContainer2About", "nav2", ""],
+  ["triangle", "triContainer2About", ""],
+];
+nav.buildNav(arr2);
+nav.addTriangle(triCenter2);
+nav.remove("triContainer2Menu");
+nav.addTriangle(triLeft2);
