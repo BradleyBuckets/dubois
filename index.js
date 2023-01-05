@@ -1,6 +1,6 @@
 let content = document.getElementById("content");
 
-class Nav {
+class ElmBuilder {
   build = (elm, target, content) => {
     let div = document.createElement("div");
     div.classList.add(elm);
@@ -11,7 +11,9 @@ class Nav {
   remove = (target) => {
     document.querySelector(`.${target}`).remove();
   };
+}
 
+class Nav extends ElmBuilder {
   buildNav = () => {
     let arr = [
       ["nav", "content", ""],
@@ -37,8 +39,38 @@ class Nav {
   };
 }
 
-// let nav = new Nav();
-// nav.buildNav();
-// nav.addTriangle("");
-// nav.remove("triContainer");
-// nav.addTriangle("Right");
+class Foot extends ElmBuilder {
+  buildFoot = () => {
+    let arr = [
+      ["foot", "content", ""],
+      ["triDown", "foot", ""],
+      ["footContainer", "foot", ""],
+      ["logo", "footContainer", "Du Bois"],
+      ["social", "footContainer", ""],
+      ["facebook", "social", ""],
+      ["instagram", "social", ""],
+      ["other", "social", ""],
+      ["options", "footContainer", ""],
+      ["list", "options", ""],
+      ["privacy", "list", "Privacy"],
+      ["legal", "list", "Legal"],
+      ["careers", "list", "Careers"],
+    ];
+    for (let arg of arr) {
+      this.build(arg[0], arg[1], arg[2]);
+    }
+  };
+}
+
+// foot, triDown, footContainer, footLogo, social, facebook, instagram, other, options, list, privacy, legal, careers
+
+let nav = new Nav();
+let body = document.createElement("div");
+body.classList.add("body");
+let foot = new Foot();
+nav.buildNav();
+content.appendChild(body);
+nav.addTriangle("");
+nav.remove("triContainer");
+nav.addTriangle("Right");
+foot.buildFoot();
