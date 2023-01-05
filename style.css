@@ -275,7 +275,18 @@ body {
 .triangle {
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
-  border-bottom: 20px solid var(--primary-white);
+  border-bottom: 15px solid var(--primary-white);
+}
+.triDown {
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 15px solid var(--primary-white);
+  align-self: center;
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
 }
 
 .triContainerLeft {
