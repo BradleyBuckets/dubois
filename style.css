@@ -149,7 +149,8 @@ body {
 .list:hover,
 .logo,
 .logo2,
-.footLogo {
+.footLogo,
+.bookNow2 {
   cursor: pointer;
 }
 
@@ -167,4 +168,42 @@ body {
   width: 34px;
   margin: 8px;
   cursor: pointer;
+}
+
+.bookNow2 {
+  position: relative;
+}
+.bookNow2::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+}
+.bookNow2::after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+}
+.bookNow2:hover::before {
+  width: 180px;
+  height: 43px;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  border: 2px solid var(--primary-white);
+  border-top: none;
+  border-right: none;
+  transition: height 0.2s linear, width 0.4s linear 0.2s;
+}
+.bookNow2:hover::after {
+  width: 180px;
+  height: 43px;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  border: 2px solid var(--primary-white);
+  border-bottom: none;
+  border-left: none;
+  transition: height 0.2s linear, width 0.4s linear 0.2s;
 }
