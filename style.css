@@ -150,6 +150,9 @@ body {
 .logo,
 .logo2,
 .footLogo,
+.bookNow,
+.menu,
+.about,
 .bookNow2,
 .menu2,
 .about2 {
@@ -161,6 +164,7 @@ body {
 .careers:hover {
   color: #a1a1aa;
   cursor: pointer;
+  transition: 100ms;
 }
 
 .facebook:hover,
