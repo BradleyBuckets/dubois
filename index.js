@@ -35,14 +35,40 @@ class Nav {
     content.appendChild(nav);
   };
 
-  test = (elm, target) => {
+  build = (elm, target, content) => {
     let div = document.createElement("div");
     div.classList.add(elm);
-    div.textContent = "About";
+    div.textContent = content;
     document.querySelector(`.${target}`).appendChild(div);
+  };
+
+  remove = (target) => {
+    document.querySelector(`.${target}`).remove();
+  };
+
+  buildNav = () => {
+    let arr = [
+      ["nav", "content", ""],
+      ["navContainer", "nav", ""],
+      ["logo", "navContainer", "Du Bois"],
+      ["navItems", "navContainer", ""],
+      ["about", "navItems", "About"],
+      ["menu", "navItems", "Menu"],
+      ["bookNow", "navItems", "Book Now"],
+      ["triContainer", "navContainer", ""],
+      ["triangle", "triContainer", ""],
+    ];
+    for (let arg of arr) {
+      this.build(arg[0], arg[1], arg[2]);
+    }
   };
 }
 
 let nav = new Nav();
-nav.createNav();
-nav.test("about", "navItems");
+// nav.createNav();
+// nav.build("about", "navItems", "About");
+// nav.remove("triangleContainer");
+// nav.build("triContainerRight", "navContainer", "");
+// nav.build("triangle", "triContainerRight", "");
+
+nav.buildNav();
