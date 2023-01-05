@@ -65,12 +65,14 @@ class Foot extends ElmBuilder {
 // foot, triDown, footContainer, footLogo, social, facebook, instagram, other, options, list, privacy, legal, careers
 
 let nav = new Nav();
+let foot = new Foot();
+
 let body = document.createElement("div");
 body.classList.add("body");
-let foot = new Foot();
-nav.buildNav();
-content.appendChild(body);
-nav.addTriangle("");
-nav.remove("triContainer");
-nav.addTriangle("Right");
-foot.buildFoot();
+
+// nav.buildNav();
+// content.appendChild(body);
+// nav.addTriangle("");
+// nav.remove("triContainer");
+// nav.addTriangle("Right");
+// foot.buildFoot();
