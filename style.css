@@ -271,3 +271,18 @@ body {
   border-left: none;
   transition: height 0.2s linear, width 0.4s linear 0.2s;
 }
+
+.triangle {
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-bottom: 20px solid var(--primary-white);
+}
+
+.triContainerLeft {
+  align-self: flex-start;
+  padding-left: 50px;
+}
+.triContainerRight {
+  align-self: flex-end;
+  padding-right: 50px;
+}
