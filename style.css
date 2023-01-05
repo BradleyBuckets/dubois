@@ -150,7 +150,9 @@ body {
 .logo,
 .logo2,
 .footLogo,
-.bookNow2 {
+.bookNow2,
+.menu2,
+.about2 {
   cursor: pointer;
 }
 
@@ -170,22 +172,30 @@ body {
   cursor: pointer;
 }
 
-.bookNow2 {
+.bookNow2,
+.menu2,
+.about2 {
   position: relative;
 }
-.bookNow2::before {
+.bookNow2::before,
+.menu2::before,
+.about2::before {
   position: absolute;
   content: "";
   height: 0;
   width: 0;
 }
-.bookNow2::after {
+.bookNow2::after,
+.menu2::after,
+.about2::after {
   position: absolute;
   content: "";
   height: 0;
   width: 0;
 }
-.bookNow2:hover::before {
+.bookNow2:hover::before,
+.menu2:hover::before,
+.about2:hover::before {
   width: 180px;
   height: 43px;
   top: 0;
@@ -196,10 +206,60 @@ body {
   border-right: none;
   transition: height 0.2s linear, width 0.4s linear 0.2s;
 }
-.bookNow2:hover::after {
+.bookNow2:hover::after,
+.menu2:hover::after,
+.about2:hover::after {
   width: 180px;
   height: 43px;
   bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+  border: 2px solid var(--primary-white);
+  border-bottom: none;
+  border-left: none;
+  transition: height 0.2s linear, width 0.4s linear 0.2s;
+}
+
+.bookNow,
+.menu,
+.about {
+  position: relative;
+}
+.bookNow::before,
+.menu::before,
+.about::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+}
+.bookNow::after,
+.menu::after,
+.about::after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+}
+.bookNow:hover::before,
+.menu:hover::before,
+.about:hover::before {
+  width: 180px;
+  height: 43px;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  border: 2px solid var(--primary-white);
+  border-top: none;
+  border-right: none;
+  transition: height 0.2s linear, width 0.4s linear 0.2s;
+}
+.bookNow:hover::after,
+.menu:hover::after,
+.about:hover::after {
+  width: 180px;
+  height: 43px;
+  bottom: 10px;
   right: 0;
   box-sizing: border-box;
   border: 2px solid var(--primary-white);
