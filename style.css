@@ -51,45 +51,6 @@ body {
   letter-spacing: 4px;
 }
 
-/* Second nav */
-.nav2 {
-  height: auto;
-  width: 100vw;
-  color: var(--primary-white);
-  background-color: var(--primary-dark);
-}
-
-.navContainer2,
-.nav2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navContainer2 {
-  width: 100%;
-  padding: 0 10px;
-}
-
-.navItems2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.about2,
-.menu2,
-.bookNow2 {
-  width: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 15px;
-  font-size: 20px;
-  letter-spacing: 2px;
-}
-
-.logo2,
 .footLogo {
   font-size: 40px;
   font-weight: bolder;
@@ -152,10 +113,7 @@ body {
 .footLogo,
 .bookNow,
 .menu,
-.about,
-.bookNow2,
-.menu2,
-.about2 {
+.about {
   cursor: pointer;
 }
 
@@ -175,55 +133,6 @@ body {
   margin: 8px;
   cursor: pointer;
 }
-
-.bookNow2,
-.menu2,
-.about2 {
-  position: relative;
-}
-.bookNow2::before,
-.menu2::before,
-.about2::before {
-  position: absolute;
-  content: "";
-  height: 0;
-  width: 0;
-}
-.bookNow2::after,
-.menu2::after,
-.about2::after {
-  position: absolute;
-  content: "";
-  height: 0;
-  width: 0;
-}
-.bookNow2:hover::before,
-.menu2:hover::before,
-.about2:hover::before {
-  width: 180px;
-  height: 43px;
-  top: 0;
-  left: 0;
-  box-sizing: border-box;
-  border: 2px solid var(--primary-white);
-  border-top: none;
-  border-right: none;
-  transition: height 0.2s linear, width 0.4s linear 0.2s;
-}
-.bookNow2:hover::after,
-.menu2:hover::after,
-.about2:hover::after {
-  width: 180px;
-  height: 43px;
-  bottom: 0;
-  right: 0;
-  box-sizing: border-box;
-  border: 2px solid var(--primary-white);
-  border-bottom: none;
-  border-left: none;
-  transition: height 0.2s linear, width 0.4s linear 0.2s;
-}
-
 .bookNow,
 .menu,
 .about {
@@ -277,11 +186,6 @@ body {
   border-right: 40px solid transparent;
   border-bottom: 15px solid var(--primary-white);
 }
-.triangle2 {
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-bottom: 15px solid var(--primary-white);
-}
 .triDown {
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
@@ -289,8 +193,7 @@ body {
   align-self: center;
 }
 
-.foot,
-.nav2 {
+.foot {
   display: flex;
   flex-direction: column;
 }
@@ -300,18 +203,6 @@ body {
   padding-left: 50px;
 }
 .triContainerRight {
-  align-self: flex-end;
-  padding-right: 50px;
-}
-.triContainer2About {
-  align-self: flex-end;
-  padding-right: 410px;
-}
-.triContainer2Menu {
-  align-self: flex-end;
-  padding-right: 230px;
-}
-.triContainer2Book {
   align-self: flex-end;
   padding-right: 50px;
 }
