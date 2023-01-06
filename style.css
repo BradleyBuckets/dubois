@@ -253,6 +253,29 @@ body {
   border-radius: 2px;
 }
 
+.formHeading {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.formHeading > h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 60px;
+  color: var(--primary-white);
+  background-color: var(--primary-dark);
+  border-radius: 2px;
+}
+.actualForm {
+  flex: 3;
+}
+.button {
+  flex: 1;
+}
+
 /* animations */
 .list:hover,
 .logo,
