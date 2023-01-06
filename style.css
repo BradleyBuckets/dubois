@@ -101,6 +101,7 @@ body {
   letter-spacing: 1.6px;
 }
 
+/* main page */
 .body {
   height: 100vh;
   background-color: var(--primary-white);
@@ -163,6 +164,7 @@ body {
   letter-spacing: 2.4px;
 }
 
+/* about page */
 .main {
   width: 90vw;
   flex: 2;
@@ -228,6 +230,26 @@ body {
 .line {
   width: 80vw;
   border: 2px solid var(--primary-dark);
+  border-radius: 2px;
+}
+
+/* book now page */
+.formContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form {
+  width: 500px;
+  height: 600px;
+  background-color: #a1a1aa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   border-radius: 2px;
 }
 
