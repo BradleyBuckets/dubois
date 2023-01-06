@@ -62,6 +62,45 @@ class Foot extends ElmBuilder {
   };
 }
 
+class About extends ElmBuilder {
+  buildAbout = () => {
+    let p1 = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+    voluptatum debitis atque adipisci. Modi mollitia esse vel
+    dolorum. Debitis fugit at natus minima aperiam eaque
+    voluptatem, harum libero quaerat dolore provident quis nihil.
+    Nobis, ducimus assumenda! Ratione cupiditate veniam, facilis
+    magni quam dolore illum. Quo, aperiam! Eligendi tempora eius
+    corrupti?`;
+
+    let p2 = `Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    Placeat, ducimus, aliquid quibusdam officiis quaerat
+    blanditiis fugiat autem dolore eligendi voluptatibus veniam?
+    Nostrum quam cupiditate nihil soluta, esse iste fugit,
+    voluptatem officiis, quisquam alias eaque debitis!`;
+
+    let arr = [
+      // * Update this list
+      ["foot", "content", ""],
+      ["triDown", "foot", ""],
+      ["footContainer", "foot", ""],
+      ["logo", "footContainer", "Du Bois"],
+      ["social", "footContainer", ""],
+      ["facebook", "social", ""],
+      ["instagram", "social", ""],
+      ["other", "social", ""],
+      ["options", "footContainer", ""],
+      ["list", "options", ""],
+      ["privacy", "list", "Privacy"],
+      ["legal", "list", "Legal"],
+      ["careers", "list", "Careers"],
+      // *
+    ];
+    for (let arg of arr) {
+      this.build(arg[0], arg[1], arg[2]);
+    }
+  };
+}
+
 // foot, triDown, footContainer, footLogo, social, facebook, instagram, other, options, list, privacy, legal, careers
 
 let nav = new Nav();
