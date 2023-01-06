@@ -164,7 +164,48 @@ body {
 }
 
 .main {
+  width: 90vw;
   flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 30px;
+}
+
+.mainPhoto {
+  background-color: blue;
+  border-radius: 2px;
+  width: 450px;
+  height: 450px;
+}
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  gap: 10px;
+}
+
+.mainHeading > h2 {
+  font-size: 36px;
+  letter-spacing: 3px;
+}
+
+.mainStory {
+  padding-left: 15px;
+  padding-right: 50px;
+}
+
+.mainStory > p {
+  padding-left: 10px;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+}
+.mainStory > h3 {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 10px 0;
 }
 
 .photos {
