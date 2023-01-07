@@ -43,6 +43,10 @@ class Nav extends ElmBuilder {
       this.build(arg[0], arg[1], arg[2]);
     }
   };
+  addClick = (cls) => {
+    let btn = document.querySelector(cls);
+    btn.addEventlistener("Click");
+  };
 }
 
 class Foot extends ElmBuilder {
@@ -65,6 +69,10 @@ class Foot extends ElmBuilder {
     for (let arg of arr) {
       this.build(arg[0], arg[1], arg[2]);
     }
+  };
+  addClick = () => {
+    let btns = [...document.querySelectorAll(".logo")];
+    btns.forEach((btn) => btn.addEventListener("click", goToMain));
   };
 }
 
@@ -293,6 +301,10 @@ class BookNow extends ElmBuilder {
   };
 }
 
+let goToMain = () => {
+  console.log("Go to main");
+};
+
 let nav = new Nav();
 let foot = new Foot();
 let abt = new About();
@@ -300,13 +312,11 @@ let menu = new Menu();
 let book = new BookNow();
 let main = new Main();
 
-let body = document.createElement("div");
-body.classList.add("body");
-// // content.appendChild(body);
+nav.buildNav();
 main.buildMain();
-// nav.buildNav();
+foot.buildFoot();
+foot.addClick();
 // menu.buildMenu();
-// foot.buildFoot();
 // nav.addTriangle("");
 // nav.remove("triContainer");
 // nav.remove("menuBody");
