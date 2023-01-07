@@ -333,19 +333,24 @@ input:focus {
 }
 
 /* menu page */
+.menuBody {
+  background-color: var(--primary-white);
+}
 .menuContainer {
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
+  gap: 20px;
 }
 .menuCard {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  gap: 20px;
+  padding-bottom: 100px;
+  gap: 30px;
 }
 .menuHeading {
   display: flex;
@@ -358,9 +363,14 @@ input:focus {
   /* border: 2px solid #a1a1aa; */
   border: 2px solid #d4d4d8;
 }
+.divideLine {
+  width: 60vw;
+  border: 2px solid #3f3f46;
+  border-radius: 2px;
+}
 .menHead {
-  font-size: 36px;
-  letter-spacing: 3.6px;
+  font-size: 40px;
+  letter-spacing: 4px;
   font-weight: bold;
 }
 .food {
@@ -374,8 +384,10 @@ input:focus {
   letter-spacing: 2.4px;
 }
 .menuDescription {
+  width: 150px;
   font-size: 18px;
   letter-spacing: 1.8px;
+  text-align: center;
 }
 
 /* animations */
