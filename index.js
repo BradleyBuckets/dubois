@@ -80,19 +80,24 @@ class About extends ElmBuilder {
 
     let arr = [
       // * Update this list
-      ["foot", "content", ""],
-      ["triDown", "foot", ""],
-      ["footContainer", "foot", ""],
-      ["logo", "footContainer", "Du Bois"],
-      ["social", "footContainer", ""],
-      ["facebook", "social", ""],
-      ["instagram", "social", ""],
-      ["other", "social", ""],
-      ["options", "footContainer", ""],
-      ["list", "options", ""],
-      ["privacy", "list", "Privacy"],
-      ["legal", "list", "Legal"],
-      ["careers", "list", "Careers"],
+      ["body", "content", ""],
+      ["bodyContainer", "body", ""],
+      ["main", "bodyContainer", ""],
+      ["mainPhoto", "main", ""],
+      ["mainContent", "main", ""],
+      ["mainHeading", "mainContent", ""],
+      ["h2", "mainHeading", "A Really Sexy Heading"],
+      ["mainStory", "mainContent", ""],
+      ["h3", "mainStory", "The Journey Begins"],
+      ["p", "mainStory", p1],
+      ["h3", "mainStory", "Intriguing Second Part"],
+      ["p", "mainStory", p2],
+      ["h3", "mainStory", "Nice Concluding Tag Line"],
+      ["line", "bodyContainer", ""],
+      ["photos", "bodyContainer", ""],
+      ["photo", "photos", ""],
+      ["photo", "photos", ""],
+      ["photo", "photos", ""],
       // *
     ];
     for (let arg of arr) {
@@ -105,6 +110,7 @@ class About extends ElmBuilder {
 
 let nav = new Nav();
 let foot = new Foot();
+let abt = new About();
 
 let body = document.createElement("div");
 body.classList.add("body");

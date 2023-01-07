@@ -189,7 +189,7 @@ body {
   gap: 10px;
 }
 
-.mainHeading > h2 {
+.mainHeading > .h2 {
   font-size: 36px;
   letter-spacing: 3px;
 }
@@ -199,12 +199,12 @@ body {
   padding-right: 50px;
 }
 
-.mainStory > p {
+.mainStory > .p {
   padding-left: 10px;
   font-size: 20px;
   letter-spacing: 1.5px;
 }
-.mainStory > h3 {
+.mainStory > .h3 {
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 2px;
