@@ -5,7 +5,8 @@ class ElmBuilder {
     let div = document.createElement("div");
     div.classList.add(elm);
     div.textContent = content;
-    document.querySelector(`.${target}`).appendChild(div);
+    // document.querySelector(`.${target}`).appendChild(div);
+    document.querySelector(`.${target}`).prepend(div);
   };
 
   remove = (target) => {
@@ -106,11 +107,70 @@ class About extends ElmBuilder {
   };
 }
 
+class Menu extends ElmBuilder {
+  buildMenu = () => {
+    let arr = [
+      // * Update this list
+      ["menuBody", "content", ""],
+      ["menuContainer", "menuBody", ""],
+      ["menuCard", "menuContainer", ""],
+      ["food1", "menuCard", ""],
+      ["menuItem", "food1", "Chips and Salsa"],
+      ["menuDescription", "food1", "Fresh salsa with corn chips"],
+      ["food2", "menuCard", ""],
+      ["menuItem", "food2", "Chips and Salsa"],
+      ["menuDescription", "food2", "Fresh salsa with corn chips"],
+      ["food3", "menuCard", ""],
+      ["menuItem", "food3", "Chips and Salsa"],
+      ["menuDescription", "food3", "Fresh salsa with corn chips"],
+      ["menuHeading", "menuCard", ""],
+      ["menuLine", "menuHeading", ""],
+      ["menHead", "menuHeading", "Appetizers"],
+      ["menuLine", "menuHeading", ""],
+      ["divideLine", "menuContainer", ""],
+      ["menuCard", "menuContainer", ""],
+      ["food1", "menuCard", ""],
+      ["menuItem", "food1", "Chips and Salsa"],
+      ["menuDescription", "food1", "Fresh salsa with corn chips"],
+      ["food2", "menuCard", ""],
+      ["menuItem", "food2", "Chips and Salsa"],
+      ["menuDescription", "food2", "Fresh salsa with corn chips"],
+      ["food3", "menuCard", ""],
+      ["menuItem", "food3", "Chips and Salsa"],
+      ["menuDescription", "food3", "Fresh salsa with corn chips"],
+      ["menuHeading", "menuCard", ""],
+      ["menuLine", "menuHeading", ""],
+      ["menHead", "menuHeading", "Appetizers"],
+      ["menuLine", "menuHeading", ""],
+      ["divideLine", "menuContainer", ""],
+      ["menuCard", "menuContainer", ""],
+      ["food1", "menuCard", ""],
+      ["menuItem", "food1", "Chips and Salsa"],
+      ["menuDescription", "food1", "Fresh salsa with corn chips"],
+      ["food2", "menuCard", ""],
+      ["menuItem", "food2", "Chips and Salsa"],
+      ["menuDescription", "food2", "Fresh salsa with corn chips"],
+      ["food3", "menuCard", ""],
+      ["menuItem", "food3", "Chips and Salsa"],
+      ["menuDescription", "food3", "Fresh salsa with corn chips"],
+      ["menuHeading", "menuCard", ""],
+      ["menuLine", "menuHeading", ""],
+      ["menHead", "menuHeading", "Appetizers"],
+      ["menuLine", "menuHeading", ""],
+      // *
+    ];
+    for (let arg of arr) {
+      this.build(arg[0], arg[1], arg[2]);
+    }
+  };
+}
+
 // foot, triDown, footContainer, footLogo, social, facebook, instagram, other, options, list, privacy, legal, careers
 
 let nav = new Nav();
 let foot = new Foot();
 let abt = new About();
+let menu = new Menu();
 
 let body = document.createElement("div");
 body.classList.add("body");
@@ -121,3 +181,4 @@ body.classList.add("body");
 // nav.remove("triContainer");
 // nav.addTriangle("Right");
 // foot.buildFoot();
+menu.buildMenu();
