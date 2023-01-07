@@ -5,7 +5,12 @@ class ElmBuilder {
     let div = document.createElement("div");
     div.classList.add(elm);
     div.textContent = content;
-    // document.querySelector(`.${target}`).appendChild(div);
+    document.querySelector(`.${target}`).appendChild(div);
+  };
+  prebuild = (elm, target, content) => {
+    let div = document.createElement("div");
+    div.classList.add(elm);
+    div.textContent = content;
     document.querySelector(`.${target}`).prepend(div);
   };
 
@@ -111,7 +116,6 @@ class Menu extends ElmBuilder {
   buildMenu = () => {
     let arr = [
       // * Update this list
-      ["menuBody", "content", ""],
       ["menuContainer", "menuBody", ""],
       ["menuCard", "menuContainer", ""],
       ["food1", "menuCard", ""],
@@ -156,8 +160,9 @@ class Menu extends ElmBuilder {
       ["menuLine", "menuHeading", ""],
       // *
     ];
+    this.build("menuBody", "content", "");
     for (let arg of arr) {
-      this.build(arg[0], arg[1], arg[2]);
+      this.prebuild(arg[0], arg[1], arg[2]);
     }
   };
 }
@@ -173,9 +178,10 @@ let body = document.createElement("div");
 body.classList.add("body");
 
 // nav.buildNav();
-// content.appendChild(body);
+// menu.buildMenu();
+// foot.buildFoot();
+// // content.appendChild(body);
 // nav.addTriangle("");
 // nav.remove("triContainer");
 // nav.addTriangle("Right");
 // foot.buildFoot();
-menu.buildMenu();
