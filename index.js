@@ -166,22 +166,117 @@ class Menu extends ElmBuilder {
     }
   };
 }
+class BookNow extends ElmBuilder {
+  part = (
+    elm,
+    target,
+    content,
+    input,
+    type,
+    name,
+    id,
+    placeholder,
+    labelFor
+  ) => {
+    let div = document.createElement(input);
+    div.classList.add(elm);
+    div.textContent = content;
+    div.type = type;
+    div.name = name;
+    div.id = id;
+    div.placeholder = placeholder;
+    div.for = labelFor;
+    document.querySelector(`.${target}`).prepend(div);
+  };
 
-// foot, triDown, footContainer, footLogo, social, facebook, instagram, other, options, list, privacy, legal, careers
+  buildBookNow = () => {
+    let arr = [
+      // * Update this list
+      ["formContainer", "body", ""],
+      ["form", "formContainer", ""],
+      ["formHeading", "form", ""],
+      ["h2", "formHeading", "Book Now"],
+      ["actualForm", "form", ""],
+      ["buttonContainer", "form", ""],
+      ["button", "buttonContainer", "Submit"],
+      // *
+    ];
+    let arr2 = [
+      ["inputGroup", "actualForm", "", "div", "", "", "", "", ""],
+      ["time", "inputGroup", "", "input", "time", "time", "time", "", ""],
+      ["label", "inputGroup", "", "div", "", "", "", "", ""],
+      ["l", "label", "Time", "label", "", "", "", "", "time"],
+      ["inputGroup", "actualForm", "", "div", "", "", "", "", ""],
+      ["date", "inputGroup", "", "input", "date", "date", "date", "", ""],
+      ["label", "inputGroup", "", "div", "", "", "", "", ""],
+      ["l", "label", "Date", "label", "", "", "", "", "date"],
+      ["inputGroup", "actualForm", "", "div", "", "", "", "", ""],
+      [
+        "last",
+        "inputGroup",
+        "",
+        "input",
+        "text",
+        "lastName",
+        "lastName",
+        "Johnson",
+        "",
+      ],
+      ["label", "inputGroup", "", "div", "", "", "", "", ""],
+      ["l", "label", "Last Name", "label", "", "", "", "", "lastName"],
+      ["inputGroup", "actualForm", "", "div", "", "", "", "", ""],
+      [
+        "first",
+        "inputGroup",
+        "",
+        "input",
+        "text",
+        "firstName",
+        "firstName",
+        "Kyle",
+        "",
+      ],
+      ["label", "inputGroup", "", "div", "", "", "", "", ""],
+      ["l", "label", "First Name", "label", "", "", "", "", "firstName"],
+    ];
+
+    this.build("body", "content", "");
+    for (let arg of arr) {
+      this.build(arg[0], arg[1], arg[2]);
+    }
+    for (let arg of arr2) {
+      this.part(
+        arg[0],
+        arg[1],
+        arg[2],
+        arg[3],
+        arg[4],
+        arg[5],
+        arg[6],
+        arg[7],
+        arg[8]
+      );
+    }
+  };
+}
 
 let nav = new Nav();
 let foot = new Foot();
 let abt = new About();
 let menu = new Menu();
+let book = new BookNow();
 
 let body = document.createElement("div");
 body.classList.add("body");
+// // content.appendChild(body);
 
 // nav.buildNav();
 // menu.buildMenu();
 // foot.buildFoot();
-// // content.appendChild(body);
 // nav.addTriangle("");
 // nav.remove("triContainer");
+// nav.remove("menuBody");
+// nav.remove("foot");
 // nav.addTriangle("Right");
+// abt.buildAbout();
 // foot.buildFoot();

@@ -260,7 +260,7 @@ body {
   align-items: center;
 }
 
-.formHeading > h2 {
+.formHeading > .h2 {
   display: flex;
   justify-content: center;
   align-items: center;
