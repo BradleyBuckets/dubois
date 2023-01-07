@@ -150,9 +150,10 @@ body {
 .heading {
   display: flex;
   align-items: center;
-  font-size: 30px;
+  font-size: 48px;
+  font-weight: bold;
   padding: 10px 15px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
 }
 .info {
   display: flex;

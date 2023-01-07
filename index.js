@@ -166,6 +166,39 @@ class Menu extends ElmBuilder {
     }
   };
 }
+class Main extends ElmBuilder {
+  buildMain = () => {
+    let arr = [
+      // * Update this list
+      ["bodyContainer", "body", ""],
+      ["cardContainer", "bodyContainer", ""],
+      ["img", "bodyContainer", ""],
+      ["triContainer", "img", ""],
+      ["triangle", "triContainer", ""],
+      ["imgBlock", "img", ""],
+      ["card", "cardContainer", ""],
+      ["info", "card", ""],
+      ["p", "info", "(564)-392-0098"],
+      ["p", "info", "Phone"],
+      ["heading", "card", "Contact"],
+      ["card", "cardContainer", ""],
+      ["info", "card", ""],
+      ["p", "info", "6pm - 11pm"],
+      ["p", "info", "Thursday - Saturday"],
+      ["heading", "card", "Hours"],
+      ["card", "cardContainer", ""],
+      ["info", "card", ""],
+      ["p", "info", "TX, 56834"],
+      ["p", "info", "123 ABC Street,"],
+      ["heading", "card", "Location"],
+      // *
+    ];
+    this.build("body", "content", "");
+    for (let arg of arr) {
+      this.prebuild(arg[0], arg[1], arg[2]);
+    }
+  };
+}
 class BookNow extends ElmBuilder {
   part = (
     elm,
@@ -265,11 +298,12 @@ let foot = new Foot();
 let abt = new About();
 let menu = new Menu();
 let book = new BookNow();
+let main = new Main();
 
 let body = document.createElement("div");
 body.classList.add("body");
 // // content.appendChild(body);
-
+main.buildMain();
 // nav.buildNav();
 // menu.buildMenu();
 // foot.buildFoot();
