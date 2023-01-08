@@ -104,7 +104,6 @@ body {
 
 /* main page */
 .body {
-  height: 100vh;
   background-color: var(--primary-white);
 }
 
@@ -120,6 +119,9 @@ body {
   flex: 3;
   display: flex;
   background-color: blue;
+  background-image: url("./steak.jpg");
+  background-size: cover;
+  background-position: center;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -178,6 +180,10 @@ body {
 
 .mainPhoto {
   background-color: blue;
+
+  background-image: url("./salmon.jpg");
+  background-position: center;
+  background-size: cover;
   border-radius: 2px;
   width: 450px;
   height: 450px;
@@ -227,6 +233,22 @@ body {
   border-radius: 2px;
   height: 25vh;
   width: 300px;
+}
+
+.photo:nth-child(1) {
+  background-image: url("./pasta.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.photo:nth-child(2) {
+  background-image: url("./icecream.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.photo:nth-child(3) {
+  background-image: url("./steak.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .line {

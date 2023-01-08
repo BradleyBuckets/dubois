@@ -43,9 +43,13 @@ class Nav extends ElmBuilder {
       this.build(arg[0], arg[1], arg[2]);
     }
   };
-  addClick = (cls) => {
-    let btn = document.querySelector(cls);
-    btn.addEventlistener("Click");
+  addClick = () => {
+    let aboutBtn = document.querySelector(".about");
+    let menuBtn = document.querySelector(".menu");
+    let bookBtn = document.querySelector(".bookNow");
+    aboutBtn.addEventListener("click", goToAbout);
+    menuBtn.addEventListener("click", goToMenu);
+    bookBtn.addEventListener("click", goToBook);
   };
 }
 
@@ -168,7 +172,8 @@ class Menu extends ElmBuilder {
       ["menuLine", "menuHeading", ""],
       // *
     ];
-    this.build("menuBody", "content", "");
+    this.build("body", "content", "");
+    this.build("menuBody", "body", "");
     for (let arg of arr) {
       this.prebuild(arg[0], arg[1], arg[2]);
     }
@@ -304,7 +309,67 @@ class BookNow extends ElmBuilder {
 let goToMain = () => {
   nav.remove("body");
   nav.remove("foot");
+  try {
+    nav.remove("triContainer");
+  } catch (error) {}
+  try {
+    nav.remove("triContainerLeft");
+  } catch (error) {}
+  try {
+    nav.remove("triContainerRight");
+  } catch (error) {}
   main.buildMain();
+  foot.buildFoot();
+  foot.addClick();
+};
+let goToAbout = () => {
+  nav.remove("body");
+  nav.remove("foot");
+  try {
+    nav.remove("triContainer");
+  } catch (error) {}
+  try {
+    nav.remove("triContainerLeft");
+  } catch (error) {}
+  try {
+    nav.remove("triContainerRight");
+  } catch (error) {}
+  nav.addTriangle("Left");
+  abt.buildAbout();
+  foot.buildFoot();
+  foot.addClick();
+};
+let goToMenu = () => {
+  nav.remove("body");
+  nav.remove("foot");
+  try {
+    nav.remove("triContainer");
+  } catch (error) {}
+  try {
+    nav.remove("triContainerLeft");
+  } catch (error) {}
+  try {
+    nav.remove("triContainerRight");
+  } catch (error) {}
+  nav.addTriangle("");
+  menu.buildMenu();
+  foot.buildFoot();
+  foot.addClick();
+};
+let goToBook = () => {
+  nav.remove("body");
+  nav.remove("foot");
+  try {
+    nav.remove("triContainer");
+  } catch (error) {}
+  try {
+    nav.remove("triContainerLeft");
+  } catch (error) {}
+  try {
+    nav.remove("triContainerRight");
+  } catch (error) {}
+  nav.addTriangle("Right");
+  book.buildBookNow();
   foot.buildFoot();
   foot.addClick();
 };
@@ -317,6 +382,7 @@ let book = new BookNow();
 let main = new Main();
 
 nav.buildNav();
+nav.addClick();
 main.buildMain();
 foot.buildFoot();
 foot.addClick();
