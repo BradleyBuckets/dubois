@@ -302,7 +302,11 @@ class BookNow extends ElmBuilder {
 }
 
 let goToMain = () => {
-  console.log("Go to main");
+  nav.remove("body");
+  nav.remove("foot");
+  main.buildMain();
+  foot.buildFoot();
+  foot.addClick();
 };
 
 let nav = new Nav();
